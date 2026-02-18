@@ -90,6 +90,9 @@ class StellarStep : JFrame("StellarStep") {
                 if (isMainScreen) {
                     // 음악 선택 화면으로
                     Music("hihat.mp3").start()
+                    VideoPlayer.play(songPack.songs.first().video)
+                    isDirty = true
+
                     isMainScreen = false
                 }
             }

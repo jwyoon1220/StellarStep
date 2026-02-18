@@ -10,6 +10,8 @@
 ## 소스에서 빌드하기
 1. 뭐 알아서 하십쇼
 2. 그냥 빌드하시면 됩니다.
+## 필요한거
+ - LibVLC(VLC 미디어 플레이어) **없으면 작동 안합니다!!**
 
 ## 라이선스
 APACHE LICENSE, VERSION 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
