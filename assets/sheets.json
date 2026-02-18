@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "songs": [
+    {
+      "id": "howtobemine",
+      "title": "내꺼 하는 법",
+      "artist": "아야츠노 유니 ( Ayatsuno Yuni )",
+      "bpm": 160,
+      "offset": -35,
+      "video": "아야츠노 유니 ( Ayatsuno Yuni ) ｜ ‘내꺼 하는 법’ Music Video [pkypi5nXSYM].mp4",
+      "jacket": "howtobemine.jpg",
+      "preview": {
+        "start": 30000,
+        "length": 15000
+      },
+      "charts": [
+        {
+          "difficulty": "HARD",
+          "level": 9,
+          "file": "howtobemine_hard.stellasheet"
+        }
+      ]
+    },
+    {
+      "id": "supadopa",
+      "title": "SUPADOPA",
+      "artist": "아야츠노 유니 ( Ayatsuno Yuni )",
+      "bpm": 160,
+      "offset": -35,
+      "video": "아야츠노 유니 ( Ayatsuno Yuni ) ｜ ‘SUPADOPA’ Music Video [R_RAWjqdgTs].mp4",
+      "jacket": "howtobemine.jpg",
+      "preview": {
+        "start": 30000,
+        "length": 15000
+      },
+      "charts": [
+        {
+          "difficulty": "HARD",
+          "level": 9,
+          "file": "howtobemine_hard.stellasheet"
+        }
+      ]
+    },
+    {
+      "id": "All I Wnat For Christmas Is You",
+      "title": "SUPADOPA",
+      "artist": "아오쿠모 린(Aokumo Rin)",
+      "bpm": 160,
+      "offset": -35,
+      "video": "All I Want For Christmas Is You (Kinyopio Ver.) ⧸ 아오쿠모 린(Aokumo Rin) Cover [zHbh6KO1dFo].mp4",
+      "jacket": "howtobemine.jpg",
+      "preview": {
+        "start": 30000,
+        "length": 15000
+      },
+      "charts": [
+        {
+          "difficulty": "HARD",
+          "level": 9,
+          "file": "howtobemine_hard.stellasheet"
+        }
+      ]
+    }
+  ]
+}
