@@ -233,7 +233,7 @@ class ChartRecordingScreen(
         game.batch.begin()
         if (game.videoPlayer.available && game.videoPlayer.texture != null) {
             game.videoPlayer.update()
-            game.batch.draw(game.videoPlayer.texture, 0f, 0f, w, h)
+            game.batch.draw(game.videoPlayer.texture!!, 0f, 0f, w, h)
         } else {
             game.batch.draw(game.skin["bg"], 0f, 0f, w, h)
         }
