@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import io.github.jwyoon1220.stellastep.StellarStepGame
 
 class MainMenuScreen(private val game: StellarStepGame) : Screen {
-    private val menuItems = listOf("PLAY", "CALIBRATION", "QUIT")
+    private val menuItems = listOf("PLAY", "CALIBRATION", "CHART EDITOR", "QUIT")
     private var selectedIndex = 0
     private var keyTimer = 0f
 
@@ -32,7 +32,8 @@ class MainMenuScreen(private val game: StellarStepGame) : Screen {
             when (selectedIndex) {
                 0 -> game.setScreen(SongSelectScreen(game))
                 1 -> game.setScreen(CalibrationScreen(game))
-                2 -> Gdx.app.exit()
+                2 -> game.setScreen(ChartEditorSetupScreen(game))
+                3 -> Gdx.app.exit()
             }
         }
 

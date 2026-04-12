@@ -12,6 +12,8 @@ data class Chart(
     val audioFile: String = "",
     /** chart-level offset in ms (positive = audio starts late relative to notes) */
     val offsetMs: Long = 0L,
+    /** optional background video file path, relative to project root */
+    val videoFile: String = "",
     val notes: List<NoteData> = emptyList()
 )
 

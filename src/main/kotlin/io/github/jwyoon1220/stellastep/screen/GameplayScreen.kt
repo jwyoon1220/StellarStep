@@ -97,6 +97,11 @@ class GameplayScreen(
                 println("Could not load audio: ${e.message}")
             }
         }
+        // Start video if chart specifies one
+        if (chart.videoFile.isNotBlank() && game.videoPlayer.available) {
+            game.videoPlayer.open(chart.videoFile)
+            game.videoPlayer.play()
+        }
     }
 
     override fun render(delta: Float) {
@@ -203,10 +208,15 @@ class GameplayScreen(
         val w = Gdx.graphics.width.toFloat()
         val h = Gdx.graphics.height.toFloat()
 
-        // Draw background
+        // Draw background (video if available, else static skin)
         game.batch.begin()
         game.batch.setColor(1f, 1f, 1f, 1f)
-        game.batch.draw(game.skin["bg"], 0f, 0f, w, h)
+        if (game.videoPlayer.available && game.videoPlayer.texture != null) {
+            game.videoPlayer.update()
+            game.batch.draw(game.videoPlayer.texture!!, 0f, 0f, w, h)
+        } else {
+            game.batch.draw(game.skin["bg"], 0f, 0f, w, h)
+        }
         game.batch.end()
 
         // Draw lanes
@@ -309,6 +319,6 @@ class GameplayScreen(
     override fun resize(width: Int, height: Int) {}
     override fun pause() {}
     override fun resume() {}
-    override fun hide() { music?.pause() }
+    override fun hide() { music?.pause(); game.videoPlayer.stop() }
     override fun dispose() { music?.dispose() }
 }

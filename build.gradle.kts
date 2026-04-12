@@ -22,6 +22,9 @@ dependencies {
     implementation("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
     // JSON parsing
     implementation("com.google.code.gson:gson:2.13.2")
+    // VLCJ video playback
+    implementation("uk.co.caprica:vlcj:4.12.1")
+    implementation("uk.co.caprica:vlcj-natives:4.12.0")
 }
 
 kotlin {
