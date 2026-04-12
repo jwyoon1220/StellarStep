@@ -27,6 +27,9 @@ import java.io.File
  *   Automatically normalizes and saves chart.json to assets/songs/<sanitizedTitle>/
  *   Then navigates to ChartEditorSaveScreen.
  */
+/** Minimum key-hold duration in ms to be recorded as a hold note; shorter presses become taps. */
+private const val MIN_HOLD_MS = 80L
+
 class ChartRecordingScreen(
     private val game:       StellarStepGame,
     private val songTitle:  String,
@@ -164,7 +167,7 @@ class ChartRecordingScreen(
                 val pressTime = keyDownTime[lane]
                 if (pressTime >= 0) {
                     val dur = time - pressTime
-                    rawNotes += Triple(pressTime, lane, if (dur > 80L) dur else 0L)
+                    rawNotes += Triple(pressTime, lane, if (dur > MIN_HOLD_MS) dur else 0L)
                     keyDownTime[lane] = -1L
                 }
             }
